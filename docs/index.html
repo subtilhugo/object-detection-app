@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TensorFlow.js Object Detection</title>
+  <!-- Load TensorFlow.js and the COCO‑SSD model from public CDNs -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.8.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <!-- Include a simple style sheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Webcam Object Detection</h1>
+    <p>
+      This demo uses a pre‑trained COCO‑SSD model running in the browser to
+      identify objects in real time. Click the button below to grant access to
+      your webcam and start detecting objects.
+    </p>
+    <button id="webcamButton">Enable Webcam</button>
+  </header>
+  <main>
+    <!-- Live view container where video and detection overlays will be drawn -->
+    <div id="liveView" class="camera">
+      <video id="webcam" autoplay playsinline></video>
+    </div>
+  </main>
+
+  <!-- Our custom script to handle webcam and model logic -->
+  <script src="script.js"></script>
+</body>
+</html>
